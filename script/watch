@@ -1,0 +1,2 @@
+coffee -wclb -o static/js/ static/cs/ &
+compass watch static
