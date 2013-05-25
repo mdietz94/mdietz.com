@@ -7,11 +7,7 @@ updatePages = (currentPage) ->
 $ ->
 
   currentPage = 0
-  updatePages(0)
-  $("#page-left").mouseover ->
-    updatePages(currentPage)
-  $("#page-right").mouseover ->
-    updatePages(currentPage)
+  updatePages(currentPage)
   $("#page-left").mousedown ->
     if currentPage > -1 # otherwise we are already all the way left
       currentPage -= 1

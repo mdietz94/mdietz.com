@@ -11,13 +11,7 @@ $(function() {
   var currentPage;
 
   currentPage = 0;
-  updatePages(0);
-  $("#page-left").mouseover(function() {
-    return updatePages(currentPage);
-  });
-  $("#page-right").mouseover(function() {
-    return updatePages(currentPage);
-  });
+  updatePages(currentPage);
   $("#page-left").mousedown(function() {
     if (currentPage > -1) {
       currentPage -= 1;
