@@ -38,25 +38,32 @@ body #page-control #page-down {
 }
 /* line 27, ../sass/screen.sass */
 body #content-main {
-  -webkit-transition: -webkit-transform 0.5s ease-in;
+  position: absolute;
+  left: 0%;
+  -webkit-transition: left 0.5s ease-in;
   margin: 50px;
+  width: 80%;
   text-align: justify;
   font-size: 20px;
   top: 30px;
 }
-/* line 33, ../sass/screen.sass */
+/* line 36, ../sass/screen.sass */
 body #content-left {
-  -webkit-transition: -webkit-transform 0.5s ease-in;
+  left: -200%;
+  -webkit-transition: left 0.5s ease-in;
   position: absolute;
   margin: 50px;
+  width: 80%;
   text-align: justify;
   font-size: 20px;
   top: 30px;
 }
-/* line 40, ../sass/screen.sass */
+/* line 45, ../sass/screen.sass */
 body #content-right {
-  -webkit-transition: -webkit-transform 0.5s ease-in;
+  left: 200%;
+  -webkit-transition: left 0.5s ease-in;
   position: absolute;
+  width: 80%;
   margin: 50px;
   text-align: justify;
   font-size: 20px;

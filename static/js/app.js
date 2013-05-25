@@ -2,17 +2,16 @@
 var updatePages;
 
 updatePages = function(currentPage) {
-  $("#content-main").css('-webkit-transform', "translateX(" + (currentPage * -200) + "%)");
-  $("#content-left").css('-webkit-transform', "translateX(" + ((1 + currentPage) * -200) + "%)");
-  return $("#content-right").css('-webkit-transform', "translateX(" + ((-1 + currentPage) * -200) + "%)");
+  $("#content-main").css('left', "" + (currentPage * -200) + "%");
+  $("#content-left").css('left', "" + ((1 + currentPage) * -200) + "%");
+  return $("#content-right").css('left', "" + ((-1 + currentPage) * -200) + "%");
 };
 
 $(function() {
   var currentPage;
 
   currentPage = 0;
-  $("#content-left").css('-webkit-transform', "translateX(-20000000%)");
-  $("#content-right").css('-webkit-transform', "translateX(20000000%)");
+  updatePages(0);
   $("#page-left").mouseover(function() {
     return updatePages(currentPage);
   });
