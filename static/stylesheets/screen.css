@@ -1,0 +1,64 @@
+/* line 1, ../sass/screen.sass */
+body {
+  overflow-x: hidden;
+  font-size: 20px;
+}
+/* line 4, ../sass/screen.sass */
+body #page-left {
+  float: left;
+  position: fixed;
+  top: 40%;
+  left: 20;
+}
+/* line 9, ../sass/screen.sass */
+body #page-right {
+  float: right;
+  position: fixed;
+  top: 40%;
+  right: 20;
+}
+/* line 14, ../sass/screen.sass */
+body #page-control {
+  background-color: brown;
+  height: 50;
+  width: 50;
+  top: 20;
+  position: fixed;
+  right: 25;
+}
+/* line 21, ../sass/screen.sass */
+body #page-control #page-up {
+  right: 100;
+  top: 20;
+}
+/* line 24, ../sass/screen.sass */
+body #page-control #page-down {
+  right: 100;
+  top: 50;
+}
+/* line 27, ../sass/screen.sass */
+body #content-main {
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  margin: 50px;
+  text-align: justify;
+  font-size: 20px;
+  top: 30px;
+}
+/* line 33, ../sass/screen.sass */
+body #content-left {
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  position: absolute;
+  margin: 50px;
+  text-align: justify;
+  font-size: 20px;
+  top: 30px;
+}
+/* line 40, ../sass/screen.sass */
+body #content-right {
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  position: absolute;
+  margin: 50px;
+  text-align: justify;
+  font-size: 20px;
+  top: 30px;
+}
