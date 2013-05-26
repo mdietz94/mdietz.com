@@ -1,24 +1,35 @@
 /* line 1, ../sass/screen.sass */
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   font-size: 20px;
 }
 /* line 4, ../sass/screen.sass */
+body h1 {
+  position: absolute;
+  left: 0;
+  top: -30px;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  height: 60px;
+}
+/* line 12, ../sass/screen.sass */
 body #page-left {
   float: left;
   position: fixed;
   top: 40%;
   left: 20;
 }
-/* line 9, ../sass/screen.sass */
+/* line 17, ../sass/screen.sass */
 body #page-right {
   float: right;
   position: fixed;
   top: 40%;
   right: 20;
 }
-/* line 14, ../sass/screen.sass */
+/* line 22, ../sass/screen.sass */
 body #page-control {
+  z-index: 2;
   background-color: brown;
   height: 50;
   width: 50;
@@ -26,46 +37,46 @@ body #page-control {
   position: fixed;
   right: 25;
 }
-/* line 21, ../sass/screen.sass */
+/* line 30, ../sass/screen.sass */
 body #page-control #page-up {
   right: 100;
   top: 20;
 }
-/* line 24, ../sass/screen.sass */
+/* line 33, ../sass/screen.sass */
 body #page-control #page-down {
   right: 100;
   top: 50;
 }
-/* line 27, ../sass/screen.sass */
+/* line 36, ../sass/screen.sass */
 body #content-main {
   position: absolute;
   left: 0%;
-  -webkit-transition: left 0.5s ease-in;
+  -webkit-transition: left 0.5s ease-in, top 0.5s;
   margin: 50px;
   width: 80%;
   text-align: justify;
   font-size: 20px;
-  top: 30px;
-}
-/* line 36, ../sass/screen.sass */
-body #content-left {
-  left: -200%;
-  -webkit-transition: left 0.5s ease-in;
-  position: absolute;
-  margin: 50px;
-  width: 80%;
-  text-align: justify;
-  font-size: 20px;
-  top: 30px;
+  top: 10px;
 }
 /* line 45, ../sass/screen.sass */
+body #content-left {
+  left: -200%;
+  -webkit-transition: left 0.5s ease-in, top 0.5s;
+  position: absolute;
+  margin: 50px;
+  width: 80%;
+  text-align: justify;
+  font-size: 20px;
+  top: 10px;
+}
+/* line 54, ../sass/screen.sass */
 body #content-right {
   left: 200%;
-  -webkit-transition: left 0.5s ease-in;
+  -webkit-transition: left 0.5s ease-in, top 0.5s;
   position: absolute;
   width: 80%;
   margin: 50px;
   text-align: justify;
   font-size: 20px;
-  top: 30px;
+  top: 10px;
 }
