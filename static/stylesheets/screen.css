@@ -1,9 +1,20 @@
 /* line 1, ../sass/screen.sass */
 body {
   overflow: hidden;
+  z-index: 0;
   font-size: 20px;
+  font-family: "Old Standard TT", sans-serif;
 }
-/* line 4, ../sass/screen.sass */
+/* line 6, ../sass/screen.sass */
+body a {
+  color: red;
+  text-decoration: none;
+}
+/* line 9, ../sass/screen.sass */
+body a:hover {
+  border-bottom: 2px solid #888888;
+}
+/* line 11, ../sass/screen.sass */
 body h1 {
   position: absolute;
   left: 0;
@@ -13,12 +24,12 @@ body h1 {
   width: 100%;
   height: 60px;
 }
-/* line 12, ../sass/screen.sass */
+/* line 19, ../sass/screen.sass */
 body .disabled {
   color: gray;
   opacity: 0.3;
 }
-/* line 15, ../sass/screen.sass */
+/* line 22, ../sass/screen.sass */
 body #page-left-border {
   position: absolute;
   background-color: white;
@@ -28,7 +39,7 @@ body #page-left-border {
   width: 60px;
   z-index: 1;
 }
-/* line 23, ../sass/screen.sass */
+/* line 30, ../sass/screen.sass */
 body #page-right-border {
   position: absolute;
   background-color: white;
@@ -38,7 +49,7 @@ body #page-right-border {
   width: 60px;
   z-index: 1;
 }
-/* line 31, ../sass/screen.sass */
+/* line 38, ../sass/screen.sass */
 body #page-left {
   -webkit-transition: all 0.5s;
   border: 2px solid black;
@@ -48,7 +59,7 @@ body #page-left {
   top: 40%;
   left: 20;
 }
-/* line 39, ../sass/screen.sass */
+/* line 46, ../sass/screen.sass */
 body #page-right {
   -webkit-transition: all 0.5s;
   border: 2px solid black;
@@ -58,7 +69,7 @@ body #page-right {
   top: 40%;
   right: 20;
 }
-/* line 47, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 body #page-control {
   z-index: 3;
   border: 2px solid black;
@@ -68,21 +79,22 @@ body #page-control {
   top: 20;
   position: absolute;
   right: 25;
+  -webkit-transition: all 0.5s;
 }
-/* line 56, ../sass/screen.sass */
+/* line 64, ../sass/screen.sass */
 body #page-control #page-up {
   -webkit-transition: all 0.5s;
   position: absolute;
   top: 0px;
   left: 5px;
 }
-/* line 61, ../sass/screen.sass */
+/* line 69, ../sass/screen.sass */
 body #page-control #page-down {
   position: absolute;
   top: 25px;
   left: 5px;
 }
-/* line 65, ../sass/screen.sass */
+/* line 73, ../sass/screen.sass */
 body #content-main {
   position: absolute;
   left: 0%;
@@ -92,11 +104,11 @@ body #content-main {
   text-align: justify;
   font-size: 20px;
   top: 10px;
-  z-index: -1;
+  z-index: 0;
 }
-/* line 75, ../sass/screen.sass */
+/* line 83, ../sass/screen.sass */
 body #content-left {
-  left: -200%;
+  left: -110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
   position: absolute;
   margin: 50px;
@@ -104,11 +116,11 @@ body #content-left {
   text-align: justify;
   font-size: 20px;
   top: 10px;
-  z-index: -1;
+  z-index: 0;
 }
-/* line 85, ../sass/screen.sass */
+/* line 93, ../sass/screen.sass */
 body #content-right {
-  left: 200%;
+  left: 110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
   position: absolute;
   width: 80%;
@@ -116,5 +128,5 @@ body #content-right {
   text-align: justify;
   font-size: 20px;
   top: 10px;
-  z-index: -1;
+  z-index: 0;
 }

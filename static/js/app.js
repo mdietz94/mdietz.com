@@ -6,15 +6,18 @@ currentPage = 0;
 currentProject = 0;
 
 updatePages = function() {
-  $("#content-main").css('left', "" + (currentPage * -200) + "%");
-  $("#content-left").css('left', "" + ((1 + currentPage) * -200) + "%");
-  $("#content-right").css('left', "" + ((-1 + currentPage) * -200) + "%");
+  $("#content-main").css('left', "" + (currentPage * -110) + "%");
+  $("#content-left").css('left', "" + ((1 + currentPage) * -110) + "%");
+  $("#content-right").css('left', "" + ((-1 + currentPage) * -110) + "%");
   $("#content-main").css('top', "" + (currentProject * -200 + 10));
   if (currentPage === -1) {
     $("#page-left").addClass("disabled");
+    $("#page-control").addClass("disabled");
   } else if (currentPage === 1) {
     $("#page-right").addClass("disabled");
+    $("#page-control").addClass("disabled");
   } else {
+    $("#page-control").removeClass("disabled");
     $("#page-right").removeClass("disabled");
     $("#page-left").removeClass("disabled");
   }
