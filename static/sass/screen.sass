@@ -5,34 +5,63 @@ body
                 position: absolute
                 left: 0
                 top: -30px
-                z-index: 1
+                z-index: 2
                 background-color: white
                 width: 100%
                 height: 60px
+        .disabled
+                color: gray
+                opacity: .3
+        #page-left-border
+                position: absolute
+                background-color: white
+                top: 0
+                left: -10px
+                height: 100%
+                width: 60px
+                z-index: 1
+        #page-right-border
+                position: absolute
+                background-color: white
+                top: 0
+                right: 0
+                height: 100%
+                width: 60px
+                z-index: 1
         #page-left
+                -webkit-transition: all 0.5s
+                border: 2px solid black
+                border-radius: 20px
                 float: left
                 position: fixed
                 top: 40%
                 left: 20
         #page-right
+                -webkit-transition: all 0.5s
+                border: 2px solid black
+                border-radius: 20px
                 float: right
                 position: fixed
                 top: 40%
                 right: 20
         #page-control
-                z-index: 2
-                background-color: brown
+                z-index: 3
+                border: 2px solid black
+                border-radius: 20px
                 height: 50
-                width: 50
+                width: 30px
                 top: 20
-                position: fixed
+                position: absolute
                 right: 25
                 #page-up
-                        right: 100
-                        top: 20
+                        -webkit-transition: all 0.5s
+                        position: absolute
+                        top: 0px
+                        left: 5px
                 #page-down
-                        right: 100
-                        top: 50
+                        position: absolute
+                        top: 25px
+                        left: 5px
         #content-main
                 position: absolute
                 left: 0%
@@ -42,6 +71,7 @@ body
                 text-align: justify
                 font-size: 20px
                 top: 10px
+                z-index: -1
         #content-left
                 left: -200%
                 -webkit-transition: left 0.5s ease-in, top 0.5s
@@ -51,6 +81,7 @@ body
                 text-align: justify
                 font-size: 20px
                 top: 10px
+                z-index: -1
         #content-right
                 left: 200%
                 -webkit-transition: left 0.5s ease-in, top 0.5s
@@ -60,3 +91,4 @@ body
                 text-align: justify
                 font-size: 20px
                 top: 10px
+                z-index: -1

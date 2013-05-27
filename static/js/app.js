@@ -9,10 +9,24 @@ updatePages = function() {
   $("#content-main").css('left', "" + (currentPage * -200) + "%");
   $("#content-left").css('left', "" + ((1 + currentPage) * -200) + "%");
   $("#content-right").css('left', "" + ((-1 + currentPage) * -200) + "%");
-  return $("#content-main").css('top', "" + (currentProject * 200 + 10));
+  $("#content-main").css('top', "" + (currentProject * -200 + 10));
+  if (currentPage === -1) {
+    $("#page-left").addClass("disabled");
+  } else if (currentPage === 1) {
+    $("#page-right").addClass("disabled");
+  } else {
+    $("#page-right").removeClass("disabled");
+    $("#page-left").removeClass("disabled");
+  }
+  if (currentPage === 0 && currentProject === 0) {
+    return $("#page-up").addClass("disabled");
+  } else {
+    return $("#page-up").removeClass("disabled");
+  }
 };
 
 moveLeft = function() {
+  $("#page-right").removeClass("disabled");
   if (currentPage > -1) {
     currentProject = 0;
     currentPage -= 1;
@@ -21,6 +35,8 @@ moveLeft = function() {
 };
 
 moveRight = function() {
+  $("#page-up").removeClass("disabled");
+  $("#page-left").removeClass("disabled");
   if (currentPage < 1) {
     currentProject = 0;
     currentPage += 1;
@@ -30,14 +46,17 @@ moveRight = function() {
 
 moveUp = function() {
   if (currentPage === 0) {
-    currentProject += 1;
-    return updatePages();
+    if (currentProject > 0) {
+      currentProject -= 1;
+      return updatePages();
+    }
   }
 };
 
 moveDown = function() {
+  $("#page-up").removeClass("disabled");
   if (currentPage === 0) {
-    currentProject -= 1;
+    currentProject += 1;
     return updatePages();
   }
 };
