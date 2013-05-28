@@ -1,11 +1,15 @@
 currentPage = 0
 updatePages = ->
+  $('body').scrollTop(0)
   if currentPage == -1
     $("#page").html "Resum&eacute;"
+    $('body').css('overflow-y', 'scroll')
   else if currentPage == 0
     $("#page").html "Projects"
+    $('body').css('overflow-y', 'hidden')
   else
     $("#page").html "Contact Information"
+    $('body').css('overflow-y', 'hidden')
   $("#content-main").css 'left', "#{currentPage*-110}%"
   $("#content-left").css 'left', "#{(1+currentPage)*-110}%"
   $("#content-right").css 'left', "#{(-1+currentPage)*-110}%"
@@ -16,7 +20,6 @@ updatePages = ->
   else
     $("#page-right").removeClass("disabled")
     $("#page-left").removeClass("disabled")
-
   
 moveLeft = ->
   $("#page-right").removeClass("disabled")

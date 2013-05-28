@@ -4,12 +4,16 @@ var currentPage, moveLeft, moveRight, updatePages;
 currentPage = 0;
 
 updatePages = function() {
+  $('body').scrollTop(0);
   if (currentPage === -1) {
     $("#page").html("Resum&eacute;");
+    $('body').css('overflow-y', 'scroll');
   } else if (currentPage === 0) {
     $("#page").html("Projects");
+    $('body').css('overflow-y', 'hidden');
   } else {
     $("#page").html("Contact Information");
+    $('body').css('overflow-y', 'hidden');
   }
   $("#content-main").css('left', "" + (currentPage * -110) + "%");
   $("#content-left").css('left', "" + ((1 + currentPage) * -110) + "%");
