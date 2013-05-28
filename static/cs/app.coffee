@@ -46,3 +46,10 @@ $ ->
     else if code == 39
       $("#usage").fadeOut(1000)
       moveRight()
+  $('body').swipeleft -> 
+    $("#usage").fadeOut(1000)
+    moveRight()
+  $('body').swiperight -> 
+    $("#usage").fadeOut(1000)
+    moveLeft()
+  

@@ -50,7 +50,7 @@ $(function() {
     $("#usage").fadeOut(1000);
     return moveLeft();
   });
-  return $('body').keydown(function(e) {
+  $('body').keydown(function(e) {
     var code;
 
     code = e.which;
@@ -61,5 +61,13 @@ $(function() {
       $("#usage").fadeOut(1000);
       return moveRight();
     }
+  });
+  $('body').swipeleft(function() {
+    $("#usage").fadeOut(1000);
+    return moveRight();
+  });
+  return $('body').swiperight(function() {
+    $("#usage").fadeOut(1000);
+    return moveLeft();
   });
 });
