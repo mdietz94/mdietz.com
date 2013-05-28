@@ -1,4 +1,4 @@
-mdietz.com
+mdietz.me
 ==========
 
 Personal website of Max Dietz
