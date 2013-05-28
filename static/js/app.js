@@ -85,7 +85,7 @@ $(function() {
     $("#usage").fadeOut(1000);
     return moveDown();
   });
-  return $('body').keyup(function(e) {
+  return $('body').keydown(function(e) {
     var code;
 
     code = e.which;

@@ -67,7 +67,7 @@ $ ->
   $("#page-down").mousedown ->
     $("#usage").fadeOut(1000)
     moveDown()
-  $('body').keyup (e) ->
+  $('body').keydown (e) ->
     code = e.which
     if code == 37
       $("#usage").fadeOut(1000)
