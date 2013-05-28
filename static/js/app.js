@@ -4,7 +4,9 @@ var currentPage, moveLeft, moveRight, updatePages;
 currentPage = 0;
 
 updatePages = function() {
-  $('body').scrollTop(0);
+  $('body').animate({
+    scrollTop: 0
+  }, 500);
   if (currentPage === -1) {
     $("#page").html("Resum&eacute;");
     $('body').css('overflow-y', 'scroll');

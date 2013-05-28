@@ -1,6 +1,6 @@
 currentPage = 0
 updatePages = ->
-  $('body').scrollTop(0)
+  $('body').animate( { scrollTop: 0 }, 500 )
   if currentPage == -1
     $("#page").html "Resum&eacute;"
     $('body').css('overflow-y', 'scroll')
