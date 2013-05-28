@@ -1,6 +1,12 @@
 currentPage = 0
 currentProject = 0
 updatePages = ->
+  if currentPage == -1
+    $("#page").html "Resum&eacute;"
+  else if currentPage == 0
+    $("#page").html "Projects"
+  else
+    $("#page").html "Contact Information"
   $("#content-main").css 'left', "#{currentPage*-110}%"
   $("#content-left").css 'left', "#{(1+currentPage)*-110}%"
   $("#content-right").css 'left', "#{(-1+currentPage)*-110}%"
