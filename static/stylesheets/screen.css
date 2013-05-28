@@ -130,3 +130,17 @@ body #content-right {
   top: 10px;
   z-index: 0;
 }
+
+/* line 103, ../sass/screen.sass */
+.class {
+  font-style: oblique;
+}
+
+/* line 105, ../sass/screen.sass */
+.location {
+  color: #303030;
+  font-style: italic;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  font-size: 18px;
+}

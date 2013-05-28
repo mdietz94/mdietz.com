@@ -6,23 +6,23 @@ updatePages = ->
   $("#content-right").css 'left', "#{(-1+currentPage)*-110}%"
   # resets in any scrolling occurred
   $("#content-main").css 'top', "#{currentProject*-200 + 10}"
+  $("#content-left").css 'top', "#{currentProject*-200 + 10}"
+  $("#content-right").css 'top', "#{currentProject*-200 + 10}"
   if currentPage == -1
     $("#page-left").addClass("disabled")
-    $("#page-control").addClass("disabled")
   else if currentPage == 1
     $("#page-right").addClass("disabled")
-    $("#page-control").addClass("disabled")
   else
-    $("#page-control").removeClass("disabled")
     $("#page-right").removeClass("disabled")
     $("#page-left").removeClass("disabled")
-  if currentPage == 0 and currentProject == 0
+  if currentProject == 0
     $("#page-up").addClass("disabled")
   else
     $("#page-up").removeClass("disabled")
 
   
 moveLeft = ->
+  $("#page-up").removeClass("disabled")
   $("#page-right").removeClass("disabled")
   if currentPage > -1 # otherwise we are already all the way left
     currentProject = 0
@@ -38,16 +38,14 @@ moveRight = ->
     updatePages()
 
 moveUp = ->
-  if currentPage == 0 # only main page scrolls
-    if currentProject > 0
-      currentProject -= 1
-      updatePages()
+  if currentProject > 0
+    currentProject -= 1
+    updatePages()
 
 moveDown = ->
   $("#page-up").removeClass("disabled")
-  if currentPage == 0
-    currentProject += 1
-    updatePages()
+  currentProject += 1
+  updatePages()
 
 $ ->
   updatePages()
