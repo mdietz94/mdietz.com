@@ -34,11 +34,20 @@ body h1 {
   height: 60px;
 }
 /* line 24, ../sass/screen.sass */
+body h1 #usage {
+  top: 20px;
+  position: fixed;
+  left: 700px;
+  display: inline;
+  color: gray;
+  font-size: 16px;
+}
+/* line 31, ../sass/screen.sass */
 body .disabled {
   color: gray;
   opacity: 0.3;
 }
-/* line 27, ../sass/screen.sass */
+/* line 34, ../sass/screen.sass */
 body #page-left-border {
   position: absolute;
   background-color: white;
@@ -48,7 +57,7 @@ body #page-left-border {
   width: 60px;
   z-index: 1;
 }
-/* line 35, ../sass/screen.sass */
+/* line 42, ../sass/screen.sass */
 body #page-right-border {
   position: absolute;
   background-color: white;
@@ -58,7 +67,7 @@ body #page-right-border {
   width: 60px;
   z-index: 1;
 }
-/* line 43, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 body #page-left {
   -webkit-transition: all 0.5s;
   border: 2px solid black;
@@ -70,7 +79,7 @@ body #page-left {
   height: 30;
   width: 30;
 }
-/* line 53, ../sass/screen.sass */
+/* line 60, ../sass/screen.sass */
 body #page-right {
   height: 30;
   width: 30;
@@ -82,7 +91,7 @@ body #page-right {
   top: 40%;
   right: 20;
 }
-/* line 63, ../sass/screen.sass */
+/* line 70, ../sass/screen.sass */
 body #page-control {
   z-index: 3;
   border: 2px solid black;
@@ -94,20 +103,20 @@ body #page-control {
   right: 25;
   -webkit-transition: all 0.5s;
 }
-/* line 73, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 body #page-control #page-up {
   -webkit-transition: all 0.5s;
   position: absolute;
   top: 0px;
   left: 5px;
 }
-/* line 78, ../sass/screen.sass */
+/* line 85, ../sass/screen.sass */
 body #page-control #page-down {
   position: absolute;
   top: 25px;
   left: 5px;
 }
-/* line 82, ../sass/screen.sass */
+/* line 89, ../sass/screen.sass */
 body #content-main {
   position: absolute;
   left: 0%;
@@ -119,7 +128,7 @@ body #content-main {
   top: 10px;
   z-index: 0;
 }
-/* line 92, ../sass/screen.sass */
+/* line 99, ../sass/screen.sass */
 body #content-left {
   left: -110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
@@ -131,7 +140,7 @@ body #content-left {
   top: 10px;
   z-index: 0;
 }
-/* line 102, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 body #content-right {
   left: 110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
@@ -144,12 +153,12 @@ body #content-right {
   z-index: 0;
 }
 
-/* line 112, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 .class {
   font-style: oblique;
 }
 
-/* line 114, ../sass/screen.sass */
+/* line 121, ../sass/screen.sass */
 .location {
   color: #303030;
   font-style: italic;

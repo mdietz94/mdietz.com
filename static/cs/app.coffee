@@ -55,17 +55,29 @@ moveDown = ->
 
 $ ->
   updatePages()
-  $("#page-right").mousedown moveRight
-  $("#page-left").mousedown moveLeft
-  $("#page-up").mousedown moveUp
-  $("#page-down").mousedown moveDown
+  $("#page-right").mousedown ->
+    $("#usage").fadeOut(1000)
+    moveRight()
+  $("#page-left").mousedown ->
+    $("#usage").fadeOut(1000)
+    moveLeft()
+  $("#page-up").mousedown ->
+    $("#usage").fadeOut(1000)
+    moveUp()
+  $("#page-down").mousedown ->
+    $("#usage").fadeOut(1000)
+    moveDown()
   $('body').keyup (e) ->
     code = e.which
     if code == 37
+      $("#usage").fadeOut(1000)
       moveLeft()
     else if code == 38
+      $("#usage").fadeOut(1000)
       moveUp()
     else if code == 39
+      $("#usage").fadeOut(1000)
       moveRight()
     else if code == 40
+      $("#usage").fadeOut(1000)
       moveDown()

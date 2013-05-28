@@ -69,21 +69,37 @@ moveDown = function() {
 
 $(function() {
   updatePages();
-  $("#page-right").mousedown(moveRight);
-  $("#page-left").mousedown(moveLeft);
-  $("#page-up").mousedown(moveUp);
-  $("#page-down").mousedown(moveDown);
+  $("#page-right").mousedown(function() {
+    $("#usage").fadeOut(1000);
+    return moveRight();
+  });
+  $("#page-left").mousedown(function() {
+    $("#usage").fadeOut(1000);
+    return moveLeft();
+  });
+  $("#page-up").mousedown(function() {
+    $("#usage").fadeOut(1000);
+    return moveUp();
+  });
+  $("#page-down").mousedown(function() {
+    $("#usage").fadeOut(1000);
+    return moveDown();
+  });
   return $('body').keyup(function(e) {
     var code;
 
     code = e.which;
     if (code === 37) {
+      $("#usage").fadeOut(1000);
       return moveLeft();
     } else if (code === 38) {
+      $("#usage").fadeOut(1000);
       return moveUp();
     } else if (code === 39) {
+      $("#usage").fadeOut(1000);
       return moveRight();
     } else if (code === 40) {
+      $("#usage").fadeOut(1000);
       return moveDown();
     }
   });
