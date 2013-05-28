@@ -1,6 +1,6 @@
 /* line 1, ../sass/screen.sass */
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 0;
   font-size: 20px;
   font-family: "Old Standard TT", sans-serif;
@@ -25,7 +25,7 @@ body a:hover {
 }
 /* line 16, ../sass/screen.sass */
 body h1 {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: -30px;
   z-index: 2;
@@ -49,7 +49,7 @@ body .disabled {
 }
 /* line 34, ../sass/screen.sass */
 body #page-left-border {
-  position: absolute;
+  position: fixed;
   background-color: white;
   top: 0;
   left: -10px;
@@ -59,7 +59,7 @@ body #page-left-border {
 }
 /* line 42, ../sass/screen.sass */
 body #page-right-border {
-  position: absolute;
+  position: fixed;
   background-color: white;
   top: 0;
   right: 0;
@@ -73,9 +73,9 @@ body #page-left {
   border: 2px solid black;
   border-radius: 20px;
   float: left;
-  position: absolute;
+  position: fixed;
   top: 40%;
-  left: 20;
+  left: 15;
   height: 30;
   width: 30;
 }
@@ -87,36 +87,11 @@ body #page-right {
   border: 2px solid black;
   border-radius: 20px;
   float: right;
-  position: absolute;
+  position: fixed;
   top: 40%;
-  right: 20;
+  right: 15;
 }
 /* line 70, ../sass/screen.sass */
-body #page-control {
-  z-index: 3;
-  border: 2px solid black;
-  border-radius: 20px;
-  height: 50;
-  width: 30px;
-  top: 20;
-  position: absolute;
-  right: 25;
-  -webkit-transition: all 0.5s;
-}
-/* line 80, ../sass/screen.sass */
-body #page-control #page-up {
-  -webkit-transition: all 0.5s;
-  position: absolute;
-  top: 0px;
-  left: 5px;
-}
-/* line 85, ../sass/screen.sass */
-body #page-control #page-down {
-  position: absolute;
-  top: 25px;
-  left: 5px;
-}
-/* line 89, ../sass/screen.sass */
 body #content-main {
   position: absolute;
   left: 0%;
@@ -128,7 +103,7 @@ body #content-main {
   top: 10px;
   z-index: 0;
 }
-/* line 99, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 body #content-left {
   left: -110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
@@ -140,7 +115,7 @@ body #content-left {
   top: 10px;
   z-index: 0;
 }
-/* line 109, ../sass/screen.sass */
+/* line 90, ../sass/screen.sass */
 body #content-right {
   left: 110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
@@ -153,12 +128,12 @@ body #content-right {
   z-index: 0;
 }
 
-/* line 119, ../sass/screen.sass */
+/* line 100, ../sass/screen.sass */
 .class {
   font-style: oblique;
 }
 
-/* line 121, ../sass/screen.sass */
+/* line 102, ../sass/screen.sass */
 .location {
   color: #303030;
   font-style: italic;
