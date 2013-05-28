@@ -6,19 +6,25 @@ currentPage = 0;
 updatePages = function() {
   if (currentPage === -1) {
     $("#page").html("Resum&eacute;");
-    $('body').css('overflow-y', 'scroll');
+    if (!navigator.userAgent.match(/mozilla/i)) {
+      $('body').css('overflow-y', 'scroll');
+    }
   } else if (currentPage === 0) {
     $('body').animate({
       scrollTop: 0
     }, 500);
     $("#page").html("Projects");
-    $('body').css('overflow-y', 'hidden');
+    if (!navigator.userAgent.match(/mozilla/i)) {
+      $('body').css('overflow-y', 'hidden');
+    }
   } else {
     $('body').animate({
       scrollTop: 0
     }, 500);
     $("#page").html("Contact Information");
-    $('body').css('overflow-y', 'hidden');
+    if (!navigator.userAgent.match(/mozilla/i)) {
+      $('body').css('overflow-y', 'hidden');
+    }
   }
   $("#content-main").css('left', "" + (currentPage * -110) + "%");
   $("#content-left").css('left', "" + ((1 + currentPage) * -110) + "%");
@@ -34,7 +40,6 @@ updatePages = function() {
 };
 
 moveLeft = function() {
-  $("#page-right").removeClass("disabled");
   if (currentPage > -1) {
     currentPage -= 1;
     return updatePages();
@@ -42,7 +47,6 @@ moveLeft = function() {
 };
 
 moveRight = function() {
-  $("#page-left").removeClass("disabled");
   if (currentPage < 1) {
     currentPage += 1;
     return updatePages();

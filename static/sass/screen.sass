@@ -49,6 +49,9 @@ body
                 z-index: 1
         #page-left
                 -webkit-transition: all 0.5s
+                -moz-transition: all 0.5s
+                -o-transition: all 0.5s
+                transition: all 0.5s
                 border: 2px solid black
                 border-radius: 20px
                 position: fixed
@@ -60,43 +63,21 @@ body
                 height: 30
                 width: 30
                 -webkit-transition: all 0.5s
+                -moz-transition: all 0.5s
+                -o-transition: all 0.5s
+                transition: all 0.5s
                 border: 2px solid black
                 border-radius: 20px
                 float: right
                 position: fixed
                 top: 40%
                 right: 10px
-        #content-main
-                position: absolute
-                left: 0px
-                -webkit-transition: all 0.5s ease-in
-                margin: 50px
-                margin-left: 60px
-                width: 80% 
-                text-align: justify
-                font-size: 20px
-                top: 10px
-                z-index: 0
-        #content-left
-                left: -110%
-                -webkit-transition: all 0.5s ease-in
-                position: absolute
-                margin: 50px
-                width: 80%
-                text-align: justify
-                font-size: 20px
-                top: 10px
-                z-index: 0
-        #content-right
-                left: 110%
-                -webkit-transition: all 0.5s ease-in
-                position: absolute
-                width: 80%
-                margin: 50px
-                text-align: justify
-                font-size: 20px
-                top: 10px
-                z-index: 0
+#content-main
+        left: 0%
+#content-left
+        left: -110%
+#content-right
+        left: 110%
 .class
         font-style: oblique
 .location
@@ -105,3 +86,15 @@ body
         margin-bottom: 30px
         margin-left: 10px
         font-size: 18px
+.content
+        -webkit-transition: left 0.5s ease-in
+        -moz-transition: left 0.5s ease-in
+        -o-transition: left 0.5s ease-in
+        transition: left 0.5s ease-in
+        position: absolute
+        width: 80%
+        margin: 50px
+        text-align: justify
+        font-size: 20px
+        top: 10px
+        z-index: 0

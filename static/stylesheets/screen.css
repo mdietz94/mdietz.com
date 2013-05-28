@@ -70,6 +70,9 @@ body #page-right-border {
 /* line 50, ../sass/screen.sass */
 body #page-left {
   -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   border: 2px solid black;
   border-radius: 20px;
   position: fixed;
@@ -78,11 +81,14 @@ body #page-left {
   height: 30;
   width: 30;
 }
-/* line 59, ../sass/screen.sass */
+/* line 62, ../sass/screen.sass */
 body #page-right {
   height: 30;
   width: 30;
   -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   border: 2px solid black;
   border-radius: 20px;
   float: right;
@@ -90,54 +96,47 @@ body #page-right {
   top: 40%;
   right: 10px;
 }
-/* line 69, ../sass/screen.sass */
-body #content-main {
-  position: absolute;
-  left: 0px;
-  -webkit-transition: all 0.5s ease-in;
-  margin: 50px;
-  margin-left: 60px;
-  width: 80%;
-  text-align: justify;
-  font-size: 20px;
-  top: 10px;
-  z-index: 0;
-}
-/* line 80, ../sass/screen.sass */
-body #content-left {
-  left: -110%;
-  -webkit-transition: all 0.5s ease-in;
-  position: absolute;
-  margin: 50px;
-  width: 80%;
-  text-align: justify;
-  font-size: 20px;
-  top: 10px;
-  z-index: 0;
-}
-/* line 90, ../sass/screen.sass */
-body #content-right {
-  left: 110%;
-  -webkit-transition: all 0.5s ease-in;
-  position: absolute;
-  width: 80%;
-  margin: 50px;
-  text-align: justify;
-  font-size: 20px;
-  top: 10px;
-  z-index: 0;
+
+/* line 75, ../sass/screen.sass */
+#content-main {
+  left: 0%;
 }
 
-/* line 100, ../sass/screen.sass */
+/* line 77, ../sass/screen.sass */
+#content-left {
+  left: -110%;
+}
+
+/* line 79, ../sass/screen.sass */
+#content-right {
+  left: 110%;
+}
+
+/* line 81, ../sass/screen.sass */
 .class {
   font-style: oblique;
 }
 
-/* line 102, ../sass/screen.sass */
+/* line 83, ../sass/screen.sass */
 .location {
   color: #303030;
   font-style: italic;
   margin-bottom: 30px;
   margin-left: 10px;
   font-size: 18px;
+}
+
+/* line 89, ../sass/screen.sass */
+.content {
+  -webkit-transition: left 0.5s ease-in;
+  -moz-transition: left 0.5s ease-in;
+  -o-transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in;
+  position: absolute;
+  width: 80%;
+  margin: 50px;
+  text-align: justify;
+  font-size: 20px;
+  top: 10px;
+  z-index: 0;
 }
