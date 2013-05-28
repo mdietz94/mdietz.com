@@ -1,13 +1,14 @@
 currentPage = 0
 updatePages = ->
-  $('body').animate( { scrollTop: 0 }, 500 )
   if currentPage == -1
     $("#page").html "Resum&eacute;"
     $('body').css('overflow-y', 'scroll')
   else if currentPage == 0
+    $('body').animate( { scrollTop: 0 }, 500 )
     $("#page").html "Projects"
     $('body').css('overflow-y', 'hidden')
   else
+    $('body').animate( { scrollTop: 0 }, 500 )
     $("#page").html "Contact Information"
     $('body').css('overflow-y', 'hidden')
   $("#content-main").css 'left', "#{currentPage*-110}%"
