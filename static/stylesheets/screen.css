@@ -55,21 +55,25 @@ body #page-left {
   border: 2px solid black;
   border-radius: 20px;
   float: left;
-  position: fixed;
+  position: absolute;
   top: 40%;
   left: 20;
+  height: 30;
+  width: 30;
 }
-/* line 46, ../sass/screen.sass */
+/* line 48, ../sass/screen.sass */
 body #page-right {
+  height: 30;
+  width: 30;
   -webkit-transition: all 0.5s;
   border: 2px solid black;
   border-radius: 20px;
   float: right;
-  position: fixed;
+  position: absolute;
   top: 40%;
   right: 20;
 }
-/* line 54, ../sass/screen.sass */
+/* line 58, ../sass/screen.sass */
 body #page-control {
   z-index: 3;
   border: 2px solid black;
@@ -81,20 +85,20 @@ body #page-control {
   right: 25;
   -webkit-transition: all 0.5s;
 }
-/* line 64, ../sass/screen.sass */
+/* line 68, ../sass/screen.sass */
 body #page-control #page-up {
   -webkit-transition: all 0.5s;
   position: absolute;
   top: 0px;
   left: 5px;
 }
-/* line 69, ../sass/screen.sass */
+/* line 73, ../sass/screen.sass */
 body #page-control #page-down {
   position: absolute;
   top: 25px;
   left: 5px;
 }
-/* line 73, ../sass/screen.sass */
+/* line 77, ../sass/screen.sass */
 body #content-main {
   position: absolute;
   left: 0%;
@@ -106,7 +110,7 @@ body #content-main {
   top: 10px;
   z-index: 0;
 }
-/* line 83, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 body #content-left {
   left: -110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
@@ -118,7 +122,7 @@ body #content-left {
   top: 10px;
   z-index: 0;
 }
-/* line 93, ../sass/screen.sass */
+/* line 97, ../sass/screen.sass */
 body #content-right {
   left: 110%;
   -webkit-transition: left 0.5s ease-in, top 0.5s;
@@ -131,12 +135,12 @@ body #content-right {
   z-index: 0;
 }
 
-/* line 103, ../sass/screen.sass */
+/* line 107, ../sass/screen.sass */
 .class {
   font-style: oblique;
 }
 
-/* line 105, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 .location {
   color: #303030;
   font-style: italic;
