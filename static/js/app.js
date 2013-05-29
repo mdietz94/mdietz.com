@@ -4,27 +4,15 @@ var currentPage, moveLeft, moveRight, updatePages;
 currentPage = 0;
 
 updatePages = function() {
+  $('body').animate({
+    scrollTop: 0
+  }, 500);
   if (currentPage === -1) {
     $("#page").html("Resum&eacute;");
-    if (!navigator.userAgent.match(/mozilla/i)) {
-      $('body').css('overflow-y', 'scroll');
-    }
   } else if (currentPage === 0) {
-    $('body').animate({
-      scrollTop: 0
-    }, 500);
     $("#page").html("Projects");
-    if (!navigator.userAgent.match(/mozilla/i)) {
-      $('body').css('overflow-y', 'hidden');
-    }
   } else {
-    $('body').animate({
-      scrollTop: 0
-    }, 500);
     $("#page").html("Contact Information");
-    if (!navigator.userAgent.match(/mozilla/i)) {
-      $('body').css('overflow-y', 'hidden');
-    }
   }
   $("#content-main").css('left', "" + (currentPage * -110) + "%");
   $("#content-left").css('left', "" + ((1 + currentPage) * -110) + "%");

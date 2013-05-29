@@ -1,29 +1,30 @@
 /* line 1, ../sass/screen.sass */
 body {
-  overflow-x: hidden;
+  overflow-x: visible;
+  overflow-y: scroll;
   z-index: 0;
   font-size: 20px;
   font-family: "Old Standard TT", sans-serif;
 }
-/* line 6, ../sass/screen.sass */
+/* line 7, ../sass/screen.sass */
 body ul {
   list-style: none;
 }
-/* line 8, ../sass/screen.sass */
+/* line 9, ../sass/screen.sass */
 body li {
   border-left: 3px solid #f0f0f0;
   margin-bottom: 20px;
 }
-/* line 11, ../sass/screen.sass */
+/* line 12, ../sass/screen.sass */
 body a {
   color: red;
   text-decoration: none;
 }
-/* line 14, ../sass/screen.sass */
+/* line 15, ../sass/screen.sass */
 body a:hover {
   border-bottom: 2px solid #888888;
 }
-/* line 16, ../sass/screen.sass */
+/* line 17, ../sass/screen.sass */
 body h1 {
   position: fixed;
   left: 0;
@@ -33,7 +34,7 @@ body h1 {
   width: 100%;
   height: 60px;
 }
-/* line 24, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
 body h1 #usage {
   top: 20px;
   position: fixed;
@@ -42,12 +43,12 @@ body h1 #usage {
   color: gray;
   font-size: 16px;
 }
-/* line 31, ../sass/screen.sass */
+/* line 32, ../sass/screen.sass */
 body .disabled {
   color: gray;
   opacity: 0.3;
 }
-/* line 34, ../sass/screen.sass */
+/* line 35, ../sass/screen.sass */
 body #page-left-border {
   position: fixed;
   background-color: white;
@@ -57,7 +58,7 @@ body #page-left-border {
   width: 60px;
   z-index: 1;
 }
-/* line 42, ../sass/screen.sass */
+/* line 43, ../sass/screen.sass */
 body #page-right-border {
   position: fixed;
   background-color: white;
@@ -67,7 +68,7 @@ body #page-right-border {
   width: 50px;
   z-index: 1;
 }
-/* line 50, ../sass/screen.sass */
+/* line 51, ../sass/screen.sass */
 body #page-left {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -81,7 +82,7 @@ body #page-left {
   height: 30;
   width: 30;
 }
-/* line 62, ../sass/screen.sass */
+/* line 63, ../sass/screen.sass */
 body #page-right {
   height: 30;
   width: 30;
@@ -97,27 +98,27 @@ body #page-right {
   right: 10px;
 }
 
-/* line 75, ../sass/screen.sass */
+/* line 76, ../sass/screen.sass */
 #content-main {
   left: 0%;
 }
 
-/* line 77, ../sass/screen.sass */
+/* line 78, ../sass/screen.sass */
 #content-left {
   left: -110%;
 }
 
-/* line 79, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 #content-right {
   left: 110%;
 }
 
-/* line 81, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 .class {
   font-style: oblique;
 }
 
-/* line 83, ../sass/screen.sass */
+/* line 84, ../sass/screen.sass */
 .location {
   color: #303030;
   font-style: italic;
@@ -126,7 +127,7 @@ body #page-right {
   font-size: 18px;
 }
 
-/* line 89, ../sass/screen.sass */
+/* line 90, ../sass/screen.sass */
 .content {
   -webkit-transition: left 0.5s ease-in;
   -moz-transition: left 0.5s ease-in;
