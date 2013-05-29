@@ -1,5 +1,6 @@
 currentPage = 0
 locked = false
+
 updatePages = ->
   switch currentPage
     when -1
@@ -70,11 +71,11 @@ $ ->
         moveLeft()
       when 39
         moveRight()
-  $('body').swipeleft ->
-    moveRight()
-  $('body').swiperight ->
-    moveLeft()
   $("#page-right").mousedown ->
     moveRight()
   $("#page-left").mousedown ->
     moveLeft()
+
+$(document).on 'pageinit', ->
+    $(window).bind "swipeleft", moveRight
+    $(window).bind "swiperight", moveLeft

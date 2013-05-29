@@ -88,16 +88,15 @@ $(function() {
         return moveRight();
     }
   });
-  $('body').swipeleft(function() {
-    return moveRight();
-  });
-  $('body').swiperight(function() {
-    return moveLeft();
-  });
   $("#page-right").mousedown(function() {
     return moveRight();
   });
   return $("#page-left").mousedown(function() {
     return moveLeft();
   });
+});
+
+$(document).on('pageinit', function() {
+  $(window).bind("swipeleft", moveRight);
+  return $(window).bind("swiperight", moveLeft);
 });
