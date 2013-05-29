@@ -1,5 +1,5 @@
 currentPage = 0
-
+locked = false
 updatePages = ->
   switch currentPage
     when -1
@@ -21,6 +21,7 @@ updatePages = ->
     $("#page-left").removeClass("disabled")
 
 onPageMoveEnd = ->
+  locked = false
   switch currentPage
     when -1
       $("#page").html "Resum&eacute;"
@@ -38,28 +39,42 @@ onPageMoveEnd = ->
   
 moveLeft = ->
   $("#usage").fadeOut(1000)
-  if currentPage > -1 # otherwise we are already all the way left
+  if not locked and currentPage > -1 # otherwise we are already all the way left
+    locked = true
     currentPage -= 1
     updatePages()
 
 moveRight = ->
   $("#usage").fadeOut(1000)
-  if currentPage < 1 # otherwise we are already all the way right
+  if not locked and currentPage < 1 # otherwise we are already all the way right
+    locked = true
     currentPage += 1
     updatePages()
 
 $ ->
   updatePages()
+  onPageMoveEnd()
   $("#content-right").on 'webkitTransitionEnd', onPageMoveEnd
   $("#content-left").on 'webkitTransitionEnd', onPageMoveEnd
   $("#content-main").on 'webkitTransitionEnd', onPageMoveEnd
+  $("#content-right").on 'transitionend', onPageMoveEnd
+  $("#content-left").on 'transitionend', onPageMoveEnd
+  $("#content-main").on 'transitionend', onPageMoveEnd
+  $("#content-right").on 'oTransitionEnd', onPageMoveEnd
+  $("#content-left").on 'oTransitionEnd', onPageMoveEnd
+  $("#content-main").on 'oTransitionEnd', onPageMoveEnd
+
   $('body').keydown (e) ->
     switch e.which
       when 37
         moveLeft()
       when 39
         moveRight()
-  $('body').swipeleft = moveRight
-  $('body').swiperight = moveLeft
-  $("#page-right").mousedown = moveRight()
-  $("#page-left").mousedown = moveLeft()
+  $('body').swipeleft ->
+    moveRight()
+  $('body').swiperight ->
+    moveLeft()
+  $("#page-right").mousedown ->
+    moveRight()
+  $("#page-left").mousedown ->
+    moveLeft()
