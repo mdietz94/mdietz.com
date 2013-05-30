@@ -78,13 +78,13 @@ body #page-left {
   position: fixed;
   top: 40%;
   left: 10px;
-  height: 30;
-  width: 30;
+  height: 40px;
+  width: 40px;
 }
 /* line 62, ../sass/screen.sass */
 body #page-right {
-  height: 30;
-  width: 30;
+  height: 40px;
+  width: 40px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
