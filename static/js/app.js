@@ -98,5 +98,11 @@ $(function() {
 
 $(document).on('pageinit', function() {
   $(window).bind("swipeleft", moveRight);
-  return $(window).bind("swiperight", moveLeft);
+  $(window).bind("swiperight", moveLeft);
+  $(window).on("orientationchange", function(e) {
+    if (e.orientation === "portrait") {
+      return alert("This webpage is optimized for landscape view.");
+    }
+  });
+  return $(window).orientationchange();
 });

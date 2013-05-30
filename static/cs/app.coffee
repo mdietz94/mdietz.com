@@ -76,6 +76,11 @@ $ ->
   $("#page-left").mousedown ->
     moveLeft()
 
+
 $(document).on 'pageinit', ->
     $(window).bind "swipeleft", moveRight
     $(window).bind "swiperight", moveLeft
+    $(window).on "orientationchange", (e) ->
+      if e.orientation == "portrait"
+        alert("This webpage is optimized for landscape view.")
+    $(window).orientationchange()
