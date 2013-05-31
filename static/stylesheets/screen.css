@@ -1,4 +1,19 @@
-/* line 1, ../sass/screen.sass */
+/* mdietz.me
+ * Copyright (C) 2013  Max Dietz
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>. */
+/* line 18, ../sass/screen.sass */
 body {
   overflow-y: scroll;
   z-index: 0;
@@ -6,28 +21,28 @@ body {
   font-family: "Old Standard TT", sans-serif;
 }
 
-/* line 6, ../sass/screen.sass */
+/* line 23, ../sass/screen.sass */
 ul {
   list-style: none;
 }
 
-/* line 8, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
 li {
   border-left: 3px solid #f0f0f0;
   margin-bottom: 20px;
 }
 
-/* line 11, ../sass/screen.sass */
+/* line 28, ../sass/screen.sass */
 a {
   color: red;
   text-decoration: none;
 }
-/* line 14, ../sass/screen.sass */
+/* line 31, ../sass/screen.sass */
 a:hover {
   border-bottom: 2px solid #888888;
 }
 
-/* line 16, ../sass/screen.sass */
+/* line 33, ../sass/screen.sass */
 h1 {
   position: fixed;
   left: 0;
@@ -40,7 +55,7 @@ h1 {
   border-bottom: 1px solid black;
 }
 
-/* line 26, ../sass/screen.sass */
+/* line 43, ../sass/screen.sass */
 #usage {
   top: 20px;
   position: fixed;
@@ -50,48 +65,48 @@ h1 {
   font-size: 16px;
 }
 
-/* line 33, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 .disabled {
   color: gray;
   opacity: 0.3;
 }
 
-/* line 36, ../sass/screen.sass */
+/* line 53, ../sass/screen.sass */
 #page-left-border {
   left: -10px;
 }
 
-/* line 38, ../sass/screen.sass */
+/* line 55, ../sass/screen.sass */
 #page-right-border {
   right: 0;
 }
 
-/* line 40, ../sass/screen.sass */
+/* line 57, ../sass/screen.sass */
 #page-left {
   left: 10px;
 }
 
-/* line 42, ../sass/screen.sass */
+/* line 59, ../sass/screen.sass */
 #page-right {
   right: 10px;
 }
 
-/* line 44, ../sass/screen.sass */
+/* line 61, ../sass/screen.sass */
 #content-main {
   left: 0%;
 }
 
-/* line 46, ../sass/screen.sass */
+/* line 63, ../sass/screen.sass */
 #content-left {
   left: -110%;
 }
 
-/* line 48, ../sass/screen.sass */
+/* line 65, ../sass/screen.sass */
 #content-right {
   left: 110%;
 }
 
-/* line 50, ../sass/screen.sass */
+/* line 67, ../sass/screen.sass */
 .border {
   position: fixed;
   background-color: white;
@@ -101,12 +116,12 @@ h1 {
   z-index: 1;
 }
 
-/* line 57, ../sass/screen.sass */
+/* line 74, ../sass/screen.sass */
 .class {
   font-style: oblique;
 }
 
-/* line 59, ../sass/screen.sass */
+/* line 76, ../sass/screen.sass */
 .location {
   color: #303030;
   font-style: italic;
@@ -115,7 +130,7 @@ h1 {
   font-size: 18px;
 }
 
-/* line 65, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 .content {
   -webkit-transition: left 0.5s ease-in;
   -moz-transition: left 0.5s ease-in;
@@ -130,7 +145,7 @@ h1 {
   z-index: 0;
 }
 
-/* line 77, ../sass/screen.sass */
+/* line 94, ../sass/screen.sass */
 .button {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
