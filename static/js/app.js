@@ -71,15 +71,9 @@ moveRight = function() {
 $(function() {
   updatePages();
   onPageMoveEnd();
-  $("#content-right").on('webkitTransitionEnd', onPageMoveEnd);
-  $("#content-left").on('webkitTransitionEnd', onPageMoveEnd);
-  $("#content-main").on('webkitTransitionEnd', onPageMoveEnd);
-  $("#content-right").on('transitionend', onPageMoveEnd);
-  $("#content-left").on('transitionend', onPageMoveEnd);
-  $("#content-main").on('transitionend', onPageMoveEnd);
-  $("#content-right").on('oTransitionEnd', onPageMoveEnd);
-  $("#content-left").on('oTransitionEnd', onPageMoveEnd);
-  $("#content-main").on('oTransitionEnd', onPageMoveEnd);
+  $("#content-right").on('webkitTransitionEnd transitionend oTransitionEnd', onPageMoveEnd);
+  $("#content-left").on('webkitTransitionEnd transitionend oTransitionEnd', onPageMoveEnd);
+  $("#content-main").on('webkitTransitionEnd transitionend oTransitionEnd', onPageMoveEnd);
   $('body').keydown(function(e) {
     switch (e.which) {
       case 37:
@@ -88,17 +82,13 @@ $(function() {
         return moveRight();
     }
   });
-  $("#page-right").mousedown(function() {
-    return moveRight();
-  });
-  return $("#page-left").mousedown(function() {
-    return moveLeft();
-  });
+  $("#page-right").mousedown(moveRight);
+  return $("#page-left").mousedown(moveLeft);
 });
 
 $(document).on('pageinit', function() {
-  $(window).bind("swipeleft", moveRight);
-  $(window).bind("swiperight", moveLeft);
+  $(window).on("swipeleft", moveRight);
+  $(window).on("swiperight", moveLeft);
   $(window).on("orientationchange", function(e) {
     if (e.orientation === "portrait") {
       return alert("This webpage is optimized for landscape view.");

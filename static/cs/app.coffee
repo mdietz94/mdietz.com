@@ -55,15 +55,9 @@ moveRight = ->
 $ ->
   updatePages()
   onPageMoveEnd()
-  $("#content-right").on 'webkitTransitionEnd', onPageMoveEnd
-  $("#content-left").on 'webkitTransitionEnd', onPageMoveEnd
-  $("#content-main").on 'webkitTransitionEnd', onPageMoveEnd
-  $("#content-right").on 'transitionend', onPageMoveEnd
-  $("#content-left").on 'transitionend', onPageMoveEnd
-  $("#content-main").on 'transitionend', onPageMoveEnd
-  $("#content-right").on 'oTransitionEnd', onPageMoveEnd
-  $("#content-left").on 'oTransitionEnd', onPageMoveEnd
-  $("#content-main").on 'oTransitionEnd', onPageMoveEnd
+  $("#content-right").on 'webkitTransitionEnd transitionend oTransitionEnd', onPageMoveEnd
+  $("#content-left").on 'webkitTransitionEnd transitionend oTransitionEnd', onPageMoveEnd
+  $("#content-main").on 'webkitTransitionEnd transitionend oTransitionEnd', onPageMoveEnd
 
   $('body').keydown (e) ->
     switch e.which
@@ -71,15 +65,13 @@ $ ->
         moveLeft()
       when 39
         moveRight()
-  $("#page-right").mousedown ->
-    moveRight()
-  $("#page-left").mousedown ->
-    moveLeft()
+  $("#page-right").mousedown moveRight
+  $("#page-left").mousedown moveLeft
 
 
 $(document).on 'pageinit', ->
-    $(window).bind "swipeleft", moveRight
-    $(window).bind "swiperight", moveLeft
+    $(window).on "swipeleft", moveRight
+    $(window).on "swiperight", moveLeft
     $(window).on "orientationchange", (e) ->
       if e.orientation == "portrait"
         alert("This webpage is optimized for landscape view.")
