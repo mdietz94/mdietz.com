@@ -42,7 +42,7 @@ onPageMoveEnd = ->
   locked = false
   switch currentPage
     when -1
-      $("#page").html "Resum&eacute;"
+      $("#page").html "Resume"
       $("#content-main").hide()
       $("#content-right").hide()
     when 0
